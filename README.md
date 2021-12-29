@@ -1,4 +1,4 @@
-.# crop2x_push_notifications
+# crop2x_push_notifications
 
 ### Dependencies: 
  ``firebase_core:``
