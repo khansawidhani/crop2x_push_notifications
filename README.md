@@ -1,4 +1,4 @@
-.# crop2x_push_notifications
+# crop2x_push_notifications
 
 ### Dependencies: 
  ``firebase_core:``
@@ -70,7 +70,7 @@ Future<void> main() async{
 
 #### For Background Notifications while app isn't terminated and running in the background but user isn't currently using it: 
 
-**Creating background message handler before main function:**
+*Creating background message handler before main function:*
 
 ```
 
