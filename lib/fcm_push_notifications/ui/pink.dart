@@ -5,7 +5,7 @@ class Pink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.pink,
       body: SafeArea(child: Center(child: Text('Pink screen'),),),
     );

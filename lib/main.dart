@@ -1,11 +1,9 @@
 // ignore_for_file: unnecessary_null_comparison
 
-import 'package:crop2x/controller/controller.dart';
-import 'package:crop2x/service/local_notification_service.dart';
-import 'package:crop2x/ui/pink.dart';
-import 'package:crop2x/ui/purple.dart';
+import 'package:crop2x/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'fcm_push_notifications/service/local_notification_service.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -44,37 +42,23 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        
         primarySwatch: Colors.blue,
       ),
-      home: TestingScreen(),
-      initialRoute: '/testing',
-      getPages: [
-        GetPage(name: '/testing', page: ()=> TestingScreen()),
-        GetPage(name: '/purple', page: ()=> const Purple()),
-
-        GetPage(name: '/pink', page: ()=> const Pink())
-
-      ],
+      initialRoute: '/tello_talk_sdk',
+      getPages:AddPages.pages
     );
   }
 }
-class TestingScreen extends StatelessWidget {
-  TestingScreen({ Key? key }) : super(key: key);
-  final controller = Get.put(Controller());
+
+class TelloTalkSdkTesting extends StatelessWidget {
+  const TelloTalkSdkTesting({ Key? key }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
-      appBar: AppBar(
-        title: const Text('Crop2x'),
-        centerTitle: true, 
-
-      ),
-      body: ListView(
-        children: const[
-          Text('Hello from crop2x'), 
-        ],
-      ),
+    return const Scaffold(
+      body: SafeArea(child: Center(
+        child: Text('Tello Talk Sdk testing', style: TextStyle(fontSize: 22.0)),
+      )),
     );
   }
 }
